@@ -38,5 +38,29 @@
     "rating": 4.9,
     "category": "Sports Car",
     "description": "The Bugatti Veyron is a supercar that is known for its top speed of 267.856 mph. It is powered by a 8.0-liter W16 engine that produces 1,001 horsepower. The Veyron is the fastest production car in the world. Available quantity: 1"
+  },
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Chevy_Silverado_1500_2019.jpg/1200px-Chevy_Silverado_1500_2019.jpg",
+    "name": "Chevy Silverado 1500",
+    "price": 25.0,
+    "rating": 4.7,
+    "category": "Truck",
+    "description": "The Chevy Silverado 1500 is a full-size pickup truck that is known for its power and durability. It is powered by a 5.3-liter V8 engine that produces 355 horsepower. The Silverado 1500 is available in a variety of configurations, including a crew cab, extended cab, and single cab. Available quantity: 10"
+  },
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ford_F-150_2019.jpg/1200px-Ford_F-150_2019.jpg",
+    "name": "Ford F-150",
+    "price": 27.0,
+    "rating": 4.8,
+    "category": "Truck",
+    "description": "The Ford F-150 is the best-selling truck in the United States. It is known for its power, durability, and versatility. The F-150 is powered by a 3.5-liter EcoBoost V6 engine that produces 375 horsepower. The F-150 is available in a variety of configurations, including a crew cab, extended cab, and single cab. Available quantity: 5"
+  },
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ram_1500_2019.jpg/1200px-Ram_1500_2019.jpg",
+    "name": "Ram 1500",
+    "price": 28.0,
+    "rating": 4.9,
+    "category": "Truck",
+    "description": "The Ram 1500 is a full-size pickup truck that is known for its power, style, and comfort. It is powered by a 5.7-liter Hemi V8 engine that produces 395 horsepower. The Ram 1500 is available in a variety of configurations, including a crew cab, extended cab, and single cab. Available quantity: 3"
   }
 ]
