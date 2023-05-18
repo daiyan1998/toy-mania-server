@@ -62,5 +62,29 @@
     "rating": 4.9,
     "category": "Truck",
     "description": "The Ram 1500 is a full-size pickup truck that is known for its power, style, and comfort. It is powered by a 5.7-liter Hemi V8 engine that produces 395 horsepower. The Ram 1500 is available in a variety of configurations, including a crew cab, extended cab, and single cab. Available quantity: 3"
+  },
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Matchbox_Car_1953_red_Austin_A30.jpg/1200px-Matchbox_Car_1953_red_Austin_A30.jpg",
+    "name": "Matchbox Mini Truck",
+    "price": 4.99,
+    "rating": 4.5,
+    "category": "Truck",
+    "description": "The Matchbox Mini Truck is a small, but mighty toy truck that is sure to be a hit with kids of all ages. It is made of durable metal and features realistic details. The Matchbox Mini Truck is available in a variety of colors and styles. Available quantity: 10"
+  },
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Hot_Wheels_1970_Dodge_Charger_Daytona.jpg/1200px-Hot_Wheels_1970_Dodge_Charger_Daytona.jpg",
+    "name": "Hot Wheels Mini Truck",
+    "price": 6.99,
+    "rating": 4.7,
+    "category": "Truck",
+    "description": "The Hot Wheels Mini Truck is a toy truck that is sure to turn heads. It features a sleek design and a powerful engine that will make you feel like you're driving a million bucks. Available quantity: 5"
+  },
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Toy_tractor.jpg/1200px-Toy_tractor.jpg",
+    "name": "Toy Mini Tractor",
+    "price": 8.99,
+    "rating": 4.8,
+    "category": "Truck",
+    "description": "The Toy Mini Tractor is a toy truck that is perfect for kids who love to play pretend. It features a realistic design and can be used to haul cargo or pull other toys. Available quantity: 3"
   }
 ]
