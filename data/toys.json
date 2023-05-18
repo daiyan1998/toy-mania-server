@@ -1,0 +1,42 @@
+[
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Hot_Wheels_Corvette_C2.jpg/1200px-Hot_Wheels_Corvette_C2.jpg",
+    "name": "Hot Wheels Corvette C2",
+    "price": 7.99,
+    "rating": 4.7,
+    "category": "Sports Car",
+    "description": "The Hot Wheels Corvette C2 is a classic sports car that is sure to turn heads. It features a sleek design and a powerful engine that will make you feel like you're driving a million bucks. Available quantity: 10"
+  },
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Lamborghini_Countach_LP5000_S_25th_Anniversary.jpg/1200px-Lamborghini_Countach_LP5000_S_25th_Anniversary.jpg",
+    "name": "Lamborghini Countach",
+    "price": 19.99,
+    "rating": 4.8,
+    "category": "Sports Car",
+    "description": "The Lamborghini Countach is a supercar that is known for its angular design and its powerful V12 engine. It is a dream car for many people, and it is sure to turn heads wherever you go. Available quantity: 5"
+  },
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ferrari_F40.jpg/1200px-Ferrari_F40.jpg",
+    "name": "Ferrari F40",
+    "price": 29.99,
+    "rating": 4.9,
+    "category": "Sports Car",
+    "description": "The Ferrari F40 is a high-performance sports car that was produced from 1987 to 1992. It is powered by a 2.9-liter twin-turbocharged V8 engine that produces 478 horsepower. The F40 is considered to be one of the most iconic sports cars of all time. Available quantity: 3"
+  },
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/McLaren_F1.jpg/1200px-McLaren_F1.jpg",
+    "name": "McLaren F1",
+    "price": 39.99,
+    "rating": 5.0,
+    "category": "Sports Car",
+    "description": "The McLaren F1 is a mid-engined sports car that was produced from 1992 to 1998. It is powered by a 6.1-liter V12 engine that produces 627 horsepower. The F1 is considered to be one of the fastest and most technologically advanced cars ever made. Available quantity: 2"
+  },
+  {
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Bugatti_Veyron_16.4.jpg/1200px-Bugatti_Veyron_16.4.jpg",
+    "name": "Bugatti Veyron",
+    "price": 49.99,
+    "rating": 4.9,
+    "category": "Sports Car",
+    "description": "The Bugatti Veyron is a supercar that is known for its top speed of 267.856 mph. It is powered by a 8.0-liter W16 engine that produces 1,001 horsepower. The Veyron is the fastest production car in the world. Available quantity: 1"
+  }
+]
