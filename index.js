@@ -5,10 +5,16 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
-console.log(process.env.DB_USER);
+// const corsConfig = {
+//   origin: "",
+//   credentials: true,
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+// };
+// app.use(cors(corsConfig));
+// app.options("", cors(corsConfig));
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.zkohjx0.mongodb.net/?retryWrites=true&w=majority`;
 
@@ -24,27 +30,23 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
 
     const toyCollection = client.db("toyMania").collection("toys");
 
-    const indexKeys = { name: 1, category: 1 };
-    const indexOptions = { name: "nameCategory" };
-    const result = await toyCollection.createIndex(indexKeys, indexOptions);
+    // const indexKeys = { name: 1, category: 1 };
+    // const indexOptions = { name: "nameCategory" };
+    // const result = await toyCollection.createIndex(indexKeys, indexOptions);
 
+    // @@@@@@@@Search Toy Start@@@@@@@@@
     app.get("/toySearchByTitle/:text", async (req, res) => {
       const searchText = req.params.text;
-
-      const result = await toyCollection
-        .find({
-          $or: [
-            { name: { $regex: searchText, $options: "i" } },
-            { category: { $regex: searchText, $options: "i" } },
-          ],
-        })
-        .toArray();
-      res.send(result);
+      const result = await toyCollection.find({ name: searchText }).toArray();
+      console.log(result);
+      return res.send(result);
     });
+
+    // @@@@@@@@Search Toy End@@@@@@@@@
 
     app.get("/", async (req, res) => {
       const cursor = toyCollection.find();
@@ -57,21 +59,10 @@ async function run() {
       const query = { _id: new ObjectId(id) };
 
       const result = await toyCollection.findOne(query);
-      console.log("result:", result);
       res.send(result);
     });
 
-    // app.get("/myToys/:id", async (req, res) => {
-    //   const id = req.params.id;
-    //   const query = { _id: new ObjectId(id) };
-
-    //   const result = await toyCollection.findOne(query);
-    //   console.log("result:", result);
-    //   res.send(result);
-    // });
-
     app.get("/myToys", async (req, res) => {
-      console.log(req.query);
       let query = {};
       if (req.query?.sellerEmail) {
         query = { sellerEmail: req.query.sellerEmail };
@@ -80,9 +71,39 @@ async function run() {
       res.send(result);
     });
 
+    // Ascending and descending
+    // app.get("/sort", async (req, res) => {
+    //   const type = req.query.type === "ascending"
+    // })
+
+    // Add A Toy
     app.post("/addToy", async (req, res) => {
       const body = req.body;
       const result = await toyCollection.insertOne(body);
+    });
+
+    // Update Toy Information
+    app.put("/updateToy/:id", async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: new ObjectId(id) };
+      const body = req.body.data;
+      console.log(body);
+      const updateDoc = {
+        $set: {
+          price: body.price,
+          description: body.description,
+          quantity: body.quantity,
+        },
+      };
+      const result = await toyCollection.updateOne(filter, updateDoc);
+      res.send(result);
+    });
+
+    // Delete Toy
+    app.delete("/deleteToy/:id", async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: new ObjectId(id) };
+      const result = await toyCollection.deleteOne(filter);
       res.send(result);
     });
 
