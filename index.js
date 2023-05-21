@@ -80,6 +80,7 @@ async function run() {
     app.post("/addToy", async (req, res) => {
       const body = req.body;
       const result = await toyCollection.insertOne(body);
+      res.send(result);
     });
 
     // Update Toy Information
@@ -87,7 +88,6 @@ async function run() {
       const id = req.params.id;
       const filter = { _id: new ObjectId(id) };
       const body = req.body.data;
-      console.log(body);
       const updateDoc = {
         $set: {
           price: body.price,
